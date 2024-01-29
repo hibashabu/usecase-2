@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #greeting-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Web Application</h1>
+
+    <form id="name-form">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" name="name" required>
+        <button type="button" onclick="greetUser()">Greet</button>
+    </form>
+
+    <div id="greeting-container"></div>
+
+    <script>
+        function greetUser() {
+            var name = document.getElementById("name").value;
+            var greetingContainer = document.getElementById("greeting-container");
+            greetingContainer.innerHTML = "<p>Hello, " + name + "!</p>";
+        }
+    </script>
+
+</body>
+</html>
